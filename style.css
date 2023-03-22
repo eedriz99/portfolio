@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
 :root {
   --primary-color: #cfdfe0;
+  --secondary-color2: #021722;
+  --secondary-color3: #3f7cee;
   --secondary-color: #002233;
   --grey: #9c9a9aa9;
 }
@@ -16,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 15px;
+  font-family: 'Alkatra', cursive;
 }
 
 .navbar {
@@ -38,7 +43,8 @@ body {
   border-bottom: 1px solid var(--secondary-color);
   z-index: 2;
   position: absolute;
-  top: 40px;
+  top: 49px;
+  right: 0px;
   padding: 10px;
 }
 
@@ -65,9 +71,25 @@ body {
   padding: 10px;
 }
 
+.text-area h1 {
+  color: var(--primary-color);
+  
+}
+
 .text-area h1 span {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--secondary-color3);
+}
+
+.text-area p {
+  /* margin-top: 5px; */
+  line-height: 20px;
+  color: var(--primary-color);
+}
+
+.text-area p span {
+  display: block;
 }
 
 .btn-group a {
@@ -86,6 +108,10 @@ body {
   color: var(--secondary-color);
 }
 
+.btn-group a:last-child {
+  padding-right: 18px;
+}
+
 .btn-group a span {
   margin-left: 10px;
 }
@@ -100,7 +126,7 @@ body {
   border-bottom: 0;
   border-radius: 10px 10px 0px 0px;
   width: 80%;
-  padding: 5px;
+  padding: 5px 5px 0px 5px;
 }
 
 .connect ul {
@@ -175,10 +201,21 @@ body {
   .text-area {
     width: 60%;
     position: absolute;
-    top: 150px;
+    top: 200px;
+    left: 150px;
   }
   .text-area h1 {
-    color: var(--primary-color);
+    color: var(--secondary-color3);
+    font-size: 2rem;
+  }
+
+  .text-area p {
+    font-size: 1.5rem;
+    margin: 15px 0px;
+  }
+
+  .text-area p span {
+    display: inline;
   }
 
   .text-area h1 span {
