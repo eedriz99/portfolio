@@ -1,0 +1,216 @@
+:root {
+  --primary-color: #cfdfe0;
+  --secondary-color: #002233;
+  --grey: #9c9a9aa9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/images/backgrounds/blob-mobile.png);
+  background-color: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 15px;
+}
+
+.navbar {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid var(--grey);
+  flex-direction: row-reverse;
+  position: static;
+}
+
+.navbar-btn {
+  background-color: #ffffff00;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.nav-list {
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  padding: 10px;
+}
+
+.nav-list-item {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: var(--secondary-color);
+}
+
+.nav-link i {
+  padding-right: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-area {
+  padding: 10px;
+}
+
+.text-area h1 span {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.btn-group a {
+  text-decoration: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: block;
+  width: fit-content;
+}
+
+.btn-group a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-group a span {
+  margin-left: 10px;
+}
+
+.connect {
+  z-index: 2;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  border: 1px solid var(--primary-color);
+  border-bottom: 0;
+  border-radius: 10px 10px 0px 0px;
+  width: 80%;
+  padding: 5px;
+}
+
+.connect ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.connect li {
+  list-style-type: none;
+}
+
+.connect li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.connect li a:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.connect li a span {
+  display: none;
+}
+
+.image-area img {
+  transform: rotateY(180deg);
+  width: 70%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (min-width: 481px) {
+  body {
+    background-image: url(/images/backgrounds/wave-desktop.png);
+    overflow: hidden;
+  }
+
+  .nav-list {
+    display: flex;
+    position: static;
+    border: 0;
+    padding: 0;
+    justify-content: space-between;
+    margin: auto;
+    background-color: inherit;
+    color: var(--primary-color);
+  }
+
+  .nav-link {
+    color: var(--primary-color);
+    margin: 5px 0px 0px 15px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+
+  .nav-link:hover {
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .navbar div {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .text-area {
+    width: 60%;
+    position: absolute;
+    top: 150px;
+  }
+  .text-area h1 {
+    color: var(--primary-color);
+  }
+
+  .text-area h1 span {
+    display: inline;
+    font-size: inherit;
+  }
+
+  .btn-group a {
+    display: inline-block;
+  }
+
+  .btn-group a:first-child {
+    margin-right: 20px;
+  }
+
+  .image-area {
+    width: 40%;
+  }
+
+  .image-area img {
+    width: fit-content;
+    max-height: 100vh;
+  }
+
+  .connect {
+    width: 60%;
+    left: 20%;
+    padding: 10px 0px;
+  }
+
+  .connect li a span {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

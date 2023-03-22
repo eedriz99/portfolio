@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0d27506b2c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <button class="navbar-btn" onclick="toggler()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <ul id="nav" class="nav-list hidden">
+        <li class="nav-list-item">
+          <a href="#" class="nav-link"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link"
+            ><i class="fa-solid fa-folder"></i> Projects</a
+          >
+        </li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link"
+            ><i class="fa-solid fa-wifi"></i>Connect</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="text-area">
+        <h1>
+          Hello,
+          <span>welcome to my little space.</span>
+        </h1>
+        <p>I'm <span>AKINSOLA IDRIS AKINWUNMI</span>, a web developer.</p>
+
+        <div class="btn-group">
+          <a href="#"
+            ><i class="fa-solid fa-folder"></i><span>Portfolio</span></a
+          >
+          <a href="#"><i class="fa-solid fa-file"></i><span>Resume</span></a>
+        </div>
+      </div>
+      <div class="image-area">
+        <img src="/images/eedriz.png" alt="" />
+      </div>
+    </div>
+    <div class="connect">
+      <ul>
+        <li>
+          <a href="#"
+            ><i class="fa-brands fa-github"></i><span> Github </span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-brands fa-twitter"></i><span> Twitter</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-envelope"></i><span> E-mail</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-brands fa-linkedin"></i><span> LinkedIn</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
