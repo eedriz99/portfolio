@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
 
 :root {
   --primary-color: #cfdfe0;
@@ -18,9 +18,11 @@ body {
   background-image: url(/images/backgrounds/blob-mobile.png);
   background-color: var(--primary-color);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-attachment: fixed;
   font-size: 15px;
-  font-family: 'Alkatra', cursive;
+  font-family: "Alkatra", cursive;
+  /* overflow: hidden; */
 }
 
 .navbar {
@@ -28,7 +30,12 @@ body {
   padding: 10px;
   border-bottom: 1px solid var(--grey);
   flex-direction: row-reverse;
-  position: static;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: var(--primary-color);
+  z-index: 2;
+  width: 100%;
 }
 
 .navbar-btn {
@@ -67,13 +74,16 @@ body {
   display: none;
 }
 
+.content {
+  margin-top: 55px;
+}
+
 .text-area {
   padding: 10px;
 }
 
 .text-area h1 {
   color: var(--primary-color);
-  
 }
 
 .text-area h1 span {
@@ -119,7 +129,7 @@ body {
 .connect {
   z-index: 2;
   background-color: var(--secondary-color);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 10%;
   border: 1px solid var(--primary-color);
@@ -162,10 +172,71 @@ body {
   bottom: 0;
 }
 
-@media screen and (min-width: 481px) {
+/* Styling for the project page */
+
+.container {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 15px;
+}
+
+.card {
+  max-width: 250px;
+  max-height: 346px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  grid-column: 2 / span 10;
+  justify-self: center;
+}
+
+.card img {
+  max-width: 250px;
+  max-height: 150px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card h4 {
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+.card .tag {
+  background-color: var(--secondary-color3);
+  color: var(--primary-color);
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 2px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 0.5rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  margin-top: 5px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  display: block;
+}
+
+/* View for screens greater than 490px */
+
+@media screen and (min-width: 491px) {
   body {
     background-image: url(/images/backgrounds/wave-desktop.png);
-    overflow: hidden;
+  }
+
+  .navbar {
+    background-color: var(--secondary-color);
   }
 
   .nav-list {
@@ -184,6 +255,11 @@ body {
     margin: 5px 0px 0px 15px;
     padding-bottom: 3px;
     border-bottom: 2px solid var(--secondary-color);
+  }
+
+  .nav-link:active {
+    color: var(--secondary-color3);
+    border-bottom-color: var(--secondary-color3);
   }
 
   .nav-link:hover {
@@ -249,5 +325,17 @@ body {
   .connect li a span {
     display: inline-block;
     margin-left: 10px;
+  }
+
+  /* Projects styling in larger screen sizes */
+  .container {
+    display: grid;
+    margin-top: 100px;
+    gap: 20px 0px;
+    margin-bottom: 70px;
+  }
+
+  .card {
+    grid-column: span 3;
   }
 }
